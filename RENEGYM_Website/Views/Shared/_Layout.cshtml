@@ -1,0 +1,83 @@
+﻿@{
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "Index";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="rg-navbar" id="rgNavbar">
+            <a class="rg-brand" asp-controller="Home" asp-action="Index">
+                <img src="~/images/logo.png" alt="RENEGYM logo" class="rg-brand-logo" />
+                <span class="rg-brand-text">RENEGYM</span>
+            </a>
+
+            <button class="rg-toggle" id="rgToggle" type="button" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="rg-nav-links">
+                <li><a class="@(currentAction == "Index" ? "active" : "")" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a class="@(currentAction == "About" ? "active" : "")" asp-controller="Home" asp-action="About">About</a></li>
+                <li><a class="@(currentAction == "Membership" ? "active" : "")" asp-controller="Home" asp-action="Membership">Membership</a></li>
+                <li><a class="@(currentAction == "Trainers" ? "active" : "")" asp-controller="Home" asp-action="Trainers">Trainers</a></li>
+                <li><a class="@(currentAction == "Promos" ? "active" : "")" asp-controller="Home" asp-action="Promos">Promos</a></li>
+                <li><a class="@(currentAction == "Contact" ? "active" : "")" asp-controller="Home" asp-action="Contact">Contact</a></li>
+            </ul>
+
+            <div class="rg-nav-actions">
+                <a href="#" class="rg-btn rg-btn-outline rg-btn-sm">Login</a>
+                <a href="#" class="rg-btn rg-btn-gold rg-btn-sm">Join Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="rg-footer">
+        <div class="rg-footer-brand">
+            <div class="rg-brand">
+                <img src="~/images/logo.png" alt="RENEGYM logo" class="rg-brand-logo" />
+            </div>
+            <p class="rg-footer-desc">Gym Booking and Attendance Management System</p>
+            <p class="rg-footer-copy">&copy; 2026 RENEGYM &middot; Team ReneGym, II-ECSAD</p>
+        </div>
+
+        <div class="rg-footer-col">
+            <h6>Members</h6>
+            <a href="#">Log in</a>
+            <a href="#">Create an account</a>
+            <a asp-controller="Home" asp-action="Membership">Renew membership</a>
+        </div>
+
+        <div class="rg-footer-col">
+            <h6>Staff</h6>
+            <a href="#">Admin Dashboard</a>
+            <a href="#">Coach Portal</a>
+            <a href="#">QR Scanner</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('rgToggle').addEventListener('click', function () {
+            document.getElementById('rgNavbar').classList.toggle('open');
+        });
+    </script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

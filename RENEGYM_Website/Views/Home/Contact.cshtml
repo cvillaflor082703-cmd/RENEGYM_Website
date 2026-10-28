@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+<section class="rg-page-header">
+    <p class="rg-eyebrow">Contact</p>
+    <h1>Get in <span class="rg-gold">touch</span></h1>
+    <p>Questions about membership or booking? Send us a message.</p>
+</section>
+
+<section class="rg-section">
+    <div class="rg-contact-wrap">
+        <div class="rg-contact-info">
+            <div class="rg-contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div><h5>Address</h5><p>Your gym address here</p></div>
+            </div>
+            <div class="rg-contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div><h5>Phone</h5><p>+63 900 000 0000</p></div>
+            </div>
+            <div class="rg-contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div><h5>Email</h5><p>hello@renegym.com</p></div>
+            </div>
+            <div class="rg-contact-item">
+                <i class="fa-solid fa-clock"></i>
+                <div><h5>Hours</h5><p>Open 24/7</p></div>
+            </div>
+        </div>
+
+        <form class="rg-form" onsubmit="return false;">
+            <h4>Send a message</h4>
+            <input type="text" placeholder="Full name" required />
+            <input type="email" placeholder="Email address" required />
+            <input type="text" placeholder="Subject" />
+            <textarea rows="5" placeholder="Your message" required></textarea>
+            <button type="submit" class="rg-btn rg-btn-gold">Send Message</button>
+        </form>
+    </div>
+</section>
