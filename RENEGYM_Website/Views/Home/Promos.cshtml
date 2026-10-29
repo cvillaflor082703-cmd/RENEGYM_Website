@@ -2,31 +2,82 @@
     ViewData["Title"] = "Promos";
 }
 
-<section class="rg-page-header">
-    <p class="rg-eyebrow">Promos</p>
-    <h1>Exclusive <span class="rg-gold">offers</span></h1>
-    <p>Save more while you train. Check our current gym discounts.</p>
+<section class="rg-pr">
+
+    <div class="rg-pr-head">
+        <h1 class="rg-pr-title">CURRENT <span class="rg-pr-gold">PROMOS</span></h1>
+    </div>
+
+    <div class="rg-pr-grid">
+
+        <div class="rg-pr-card">
+            <h2 class="rg-pr-offer">₱200 OFF</h2>
+            <p class="rg-pr-desc">
+                Join with a friend. Both of<br />
+                you save on the first month.
+            </p>
+            <span class="rg-pr-code">BUDDY200</span>
+
+            <div class="rg-pr-actions">
+                <button type="button" class="rg-pr-btn rg-pr-btn-outline" data-code="BUDDY200">Copy code</button>
+                <a href="#" class="rg-pr-btn rg-pr-btn-gold">Use now</a>
+            </div>
+        </div>
+
+        <div class="rg-pr-card">
+            <h2 class="rg-pr-offer">20% OFF</h2>
+            <p class="rg-pr-desc">
+                Students save on any plan<br />
+                with a valid school ID.
+            </p>
+            <span class="rg-pr-code">STUDENT20</span>
+
+            <div class="rg-pr-actions">
+                <button type="button" class="rg-pr-btn rg-pr-btn-outline" data-code="STUDENT20">Copy code</button>
+                <a href="#" class="rg-pr-btn rg-pr-btn-gold">Use now</a>
+            </div>
+        </div>
+
+        <div class="rg-pr-card">
+            <h2 class="rg-pr-offer">FREE SESSION</h2>
+            <p class="rg-pr-desc">
+                Renew before your expiry date<br />
+                and get one free coach session.
+            </p>
+            <span class="rg-pr-code">EARLYRENEW</span>
+
+            <div class="rg-pr-actions">
+                <button type="button" class="rg-pr-btn rg-pr-btn-outline" data-code="EARLYRENEW">Copy code</button>
+                <a href="#" class="rg-pr-btn rg-pr-btn-gold">Use now</a>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
-<section class="rg-section">
-    <div class="rg-grid rg-grid-3">
-        <div class="rg-info-card rg-promo">
-            <span class="rg-badge">20% OFF</span>
-            <h4>New Member Promo</h4>
-            <p>Get 20% off your first month when you sign up this season.</p>
-            <a href="#" class="rg-btn rg-btn-gold rg-btn-sm">Claim Offer</a>
-        </div>
-        <div class="rg-info-card rg-promo">
-            <span class="rg-badge">BUY 1 TAKE 1</span>
-            <h4>Bring a Buddy</h4>
-            <p>Sign up with a friend and one of you joins free for a month.</p>
-            <a href="#" class="rg-btn rg-btn-gold rg-btn-sm">Claim Offer</a>
-        </div>
-        <div class="rg-info-card rg-promo">
-            <span class="rg-badge">STUDENT</span>
-            <h4>Student Discount</h4>
-            <p>Show a valid school ID for a special student membership rate.</p>
-            <a href="#" class="rg-btn rg-btn-gold rg-btn-sm">Claim Offer</a>
-        </div>
-    </div>
-</section>
+<script>
+    document.querySelectorAll('.rg-pr-btn[data-code]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var code = btn.getAttribute('data-code');
+            var original = btn.textContent;
+
+            function done() {
+                btn.textContent = 'Copied!';
+                setTimeout(function () { btn.textContent = original; }, 1500);
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(code).then(done);
+            } else {
+                var temp = document.createElement('textarea');
+                temp.value = code;
+                document.body.appendChild(temp);
+                temp.select();
+                document.execCommand('copy');
+                document.body.removeChild(temp);
+                done();
+            }
+        });
+    });
+</script>

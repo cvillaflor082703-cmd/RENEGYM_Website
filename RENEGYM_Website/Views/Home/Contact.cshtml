@@ -2,40 +2,153 @@
     ViewData["Title"] = "Contact";
 }
 
-<section class="rg-page-header">
-    <p class="rg-eyebrow">Contact</p>
-    <h1>Get in <span class="rg-gold">touch</span></h1>
-    <p>Questions about membership or booking? Send us a message.</p>
-</section>
+<link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
 
-<section class="rg-section">
-    <div class="rg-contact-wrap">
-        <div class="rg-contact-info">
-            <div class="rg-contact-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <div><h5>Address</h5><p>Your gym address here</p></div>
+<section class="rg-ct">
+
+    <div class="rg-ct-head">
+        <h1 class="rg-ct-title">GET IN <span class="rg-ct-gold">TOUCH</span></h1>
+        <p class="rg-ct-sub">
+            Questions about memberships, coaches or<br />
+            promos? Send us a message and the RENEGYM<br />
+            team will reply.
+        </p>
+    </div>
+
+    <!-- INFO CARDS -->
+    <div class="rg-ct-info">
+
+        <div class="rg-ct-info-card">
+            <h5>VISIT US</h5>
+            <p>
+                1103 Nalunod Street,<br />
+                Barangay Di Maiwasan,<br />
+                Makati City
+            </p>
+        </div>
+
+        <div class="rg-ct-info-card">
+            <h5>OPEN HOURS</h5>
+            <p>
+                24/7 gym access<br />
+                10:00AM - 10:00PM
+            </p>
+        </div>
+
+        <div class="rg-ct-info-card">
+            <h5>CALL / EMAIL</h5>
+            <p>
+                09265812848<br />
+                renegym.official@gmail.com
+            </p>
+        </div>
+
+        <div class="rg-ct-info-card">
+            <h5>PAY AT</h5>
+            <p>
+                Front desk, GCash,<br />
+                Maya or card
+            </p>
+        </div>
+
+    </div>
+
+    <!-- FORM + FAQ -->
+    <div class="rg-ct-main">
+
+        <!-- SEND A MESSAGE -->
+        <form class="rg-ct-form" id="rgContactForm">
+            <h3 class="rg-ct-form-title">Send a <span class="rg-ct-gold">Message</span></h3>
+
+            <div class="rg-ct-row">
+                <div class="rg-ct-field">
+                    <label for="ctName">Your name</label>
+                    <input type="text" id="ctName" name="name" required />
+                </div>
+
+                <div class="rg-ct-field">
+                    <label for="ctContact">Email or mobile</label>
+                    <input type="text" id="ctContact" name="contact" required />
+                </div>
             </div>
-            <div class="rg-contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <div><h5>Phone</h5><p>+63 900 000 0000</p></div>
+
+            <div class="rg-ct-field">
+                <label for="ctMessage">Message</label>
+                <textarea id="ctMessage" name="message" rows="5" required></textarea>
             </div>
-            <div class="rg-contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <div><h5>Email</h5><p>hello@renegym.com</p></div>
+
+            <button type="submit" class="rg-ct-send">Send Message</button>
+            <p class="rg-ct-status" id="rgContactStatus"></p>
+        </form>
+
+        <!-- FAQ (+ opens, - closes) -->
+        <div class="rg-ct-faq">
+            <h3 class="rg-ct-faq-title">FREQUENTLY ASKED <span class="rg-ct-gold">QUESTIONS</span></h3>
+            <p class="rg-ct-faq-sub">Quick answers to common questions</p>
+
+            <div class="rg-ct-faq-item">
+                <button type="button" class="rg-ct-faq-q" aria-expanded="false">
+                    <span>What are your membership rates?</span>
+                    <span class="rg-ct-faq-icon">+</span>
+                </button>
+                <div class="rg-ct-faq-a">
+                    <div class="rg-ct-faq-a-inner">
+                        <p>
+                            <b>Monthly</b> ₱1,200 &middot; <b>Quarterly</b> ₱3,300 &middot; <b>Annual</b> ₱11,500.
+                            Day pass: ₱150.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="rg-contact-item">
-                <i class="fa-solid fa-clock"></i>
-                <div><h5>Hours</h5><p>Open 24/7</p></div>
+
+            <div class="rg-ct-faq-item">
+                <button type="button" class="rg-ct-faq-q" aria-expanded="false">
+                    <span>Do you offer personal training?</span>
+                    <span class="rg-ct-faq-icon">+</span>
+                </button>
+                <div class="rg-ct-faq-a">
+                    <div class="rg-ct-faq-a-inner">
+                        <p>Yes! Pick from 4 coaches. One session is <b>₱500</b>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rg-ct-faq-item">
+                <button type="button" class="rg-ct-faq-q" aria-expanded="false">
+                    <span>What should I bring to the gym?</span>
+                    <span class="rg-ct-faq-icon">+</span>
+                </button>
+                <div class="rg-ct-faq-a">
+                    <div class="rg-ct-faq-a-inner">
+                        <p>Your <b>phone</b> (for QR check-in), a towel, water, and workout clothes.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <form class="rg-form" onsubmit="return false;">
-            <h4>Send a message</h4>
-            <input type="text" placeholder="Full name" required />
-            <input type="email" placeholder="Email address" required />
-            <input type="text" placeholder="Subject" />
-            <textarea rows="5" placeholder="Your message" required></textarea>
-            <button type="submit" class="rg-btn rg-btn-gold">Send Message</button>
-        </form>
     </div>
+
 </section>
+
+<script>
+    // Contact form
+    document.getElementById('rgContactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var status = document.getElementById('rgContactStatus');
+        status.textContent = 'Thank you! Your message has been sent.';
+        this.reset();
+        setTimeout(function () { status.textContent = ''; }, 4000);
+    });
+
+    // FAQ: click + to open (becomes -), click - to close (back to +)
+    document.querySelectorAll('.rg-ct-faq-q').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var item = btn.parentElement;
+            var icon = btn.querySelector('.rg-ct-faq-icon');
+            var isOpen = item.classList.toggle('open');
+
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            icon.textContent = isOpen ? '-' : '+';
+        });
+    });
+</script>

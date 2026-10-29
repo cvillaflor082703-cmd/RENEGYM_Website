@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Space+Mono&display=swap');
+
 html {
     font-size: 14px;
 }
@@ -634,6 +636,307 @@ main {
             border-color: var(--rg-gold);
         }
 
+.rg-about {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    background: url('../images/gym.jpg') center / cover no-repeat;
+    color: #fff;
+}
+
+    .rg-about::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+    }
+
+.rg-about-band {
+    position: relative;
+    width: 100%;
+    padding: 90px 5%;
+    background: rgba(0, 0, 0, 0.62);
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 560px) 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.rg-about-values {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 18px;
+    align-self: end;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.35rem;
+    line-height: 1.45;
+}
+
+    .rg-about-values::after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 4px;
+        margin-top: 14px;
+        background: var(--rg-gold);
+    }
+
+.rg-about-center {
+    text-align: center;
+}
+
+.rg-about-title {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.rg-about .rg-about-gold {
+    color: var(--rg-gold);
+}
+
+.rg-about-line {
+    width: 52px;
+    height: 4px;
+    margin: 22px auto 18px;
+    background: var(--rg-gold);
+}
+
+.rg-about-est {
+    margin: 0 0 18px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #d6d6d6;
+}
+
+.rg-about-text {
+    margin: 0 auto;
+    max-width: 380px;
+    font-size: 1.05rem;
+    line-height: 1.45;
+    color: #f1f1f1;
+}
+
+.rg-about-quote {
+    justify-self: end;
+    align-self: end;
+    padding: 14px 22px;
+    border-left: 3px solid var(--rg-gold);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 1rem;
+    transition: color 0.25s ease, background 0.25s ease;
+}
+
+    .rg-about-quote:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+.rg-mem {
+    position: relative;
+    padding: 60px 8vw 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.8)), url('../images/gym.jpg') center / cover no-repeat;
+    color: #fff;
+}
+
+.rg-mem-head {
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+.rg-mem-title {
+    margin: 0 0 14px;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.rg-mem-gold {
+    color: var(--rg-gold);
+}
+
+.rg-mem-sub {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.rg-mem-plans {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rg-mem-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 22px 26px;
+    background: rgba(8, 8, 8, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    font-family: 'Space Mono', monospace;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+    .rg-mem-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+        border-color: var(--rg-gold);
+    }
+
+.rg-mem-card-featured {
+    border-color: var(--rg-gold);
+    padding-top: 34px;
+    margin: -12px 0;
+}
+
+.rg-mem-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px 14px;
+    background: #0b0b0b;
+    border: 1px solid var(--rg-gold);
+    color: #fff;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.rg-mem-plan-name {
+    margin: 0 0 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.rg-mem-price {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.rg-mem-note {
+    margin: 4px 0 16px;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.rg-mem-list {
+    list-style: none;
+    margin: 0 0 22px;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+    .rg-mem-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 4px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        font-size: 0.74rem;
+        color: rgba(255, 255, 255, 0.92);
+    }
+
+        .rg-mem-list li i {
+            color: var(--rg-gold);
+            font-size: 0.75rem;
+        }
+
+.rg-mem-btn {
+    margin-top: auto;
+    display: block;
+    padding: 9px 12px;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+}
+
+.rg-mem-btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    color: #fff;
+}
+
+    .rg-mem-btn-outline:hover {
+        background: #fff;
+        color: #000;
+    }
+
+.rg-mem-btn-gold {
+    background: var(--rg-gold);
+    border: 1px solid var(--rg-gold);
+    color: #111;
+}
+
+    .rg-mem-btn-gold:hover {
+        background: #f5cb4a;
+        color: #000;
+        box-shadow: 0 6px 18px rgba(232, 185, 49, 0.35);
+    }
+
+.rg-mem-extras {
+    margin-top: 34px;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+}
+
+    .rg-mem-extras p {
+        margin: 0 0 4px;
+        font-size: 1rem;
+    }
+
+    .rg-mem-extras strong {
+        color: var(--rg-gold);
+        font-size: 1.1rem;
+    }
+
+.rg-mem-gap {
+    display: inline-block;
+    width: 28px;
+}
+
+.rg-mem-extras .rg-mem-sample {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 992px) {
+    .rg-mem-plans {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        gap: 34px;
+    }
+
+    .rg-mem-card-featured {
+        margin: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .rg-mem-gap {
+        display: block;
+        width: 0;
+        height: 6px;
+    }
+}
+
+
 @media (max-width: 992px) {
     .rg-cards {
         grid-template-columns: repeat(2, 1fr);
@@ -656,6 +959,551 @@ main {
     }
 
     .rg-contact-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .rg-about-band {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 6%;
+    }
+
+    .rg-about-values,
+    .rg-about-quote {
+        justify-self: center;
+        align-self: center;
+    }
+
+        .rg-about-values::after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+}
+
+.rg-tr {
+    position: relative;
+    min-height: calc(100vh - 64px - 90px);
+    padding: 70px 6vw 80px;
+    background: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.78)), url('../images/gym.jpg') center / cover no-repeat;
+    color: #fff;
+}
+
+.rg-tr-head {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.rg-tr-title {
+    margin: 0 0 18px;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.rg-tr-gold {
+    color: var(--rg-gold);
+}
+
+.rg-tr-sub {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.rg-tr-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 46px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.rg-tr-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 215px;
+    padding: 12px 14px 20px;
+    text-align: center;
+    background: rgba(8, 8, 8, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .rg-tr-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--rg-gold);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+    }
+
+.rg-tr-avatar {
+    width: 62px;
+    height: 62px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .rg-tr-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.rg-tr-initial {
+    background: var(--rg-gold);
+    color: #111;
+    font-size: 1.9rem;
+    font-weight: 800;
+}
+
+.rg-tr-label {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.rg-tr-name {
+    margin: 0 0 4px;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--rg-gold);
+}
+
+.rg-tr-role {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 992px) {
+    .rg-tr-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        max-width: 560px;
+    }
+}
+
+@media (max-width: 576px) {
+    .rg-tr-grid {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+    }
+}
+
+.rg-pr {
+    position: relative;
+    min-height: calc(100vh - 64px - 90px);
+    padding: 70px 4vw 90px;
+    background: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.78)), url('../images/gym.jpg') center / cover no-repeat;
+    color: #fff;
+}
+
+.rg-pr-head {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.rg-pr-title {
+    margin: 0;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.rg-pr-gold {
+    color: var(--rg-gold);
+}
+
+.rg-pr-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.rg-pr-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px 40px 20px;
+    background: rgba(8, 8, 8, 0.88);
+    border: 1px solid var(--rg-gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .rg-pr-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+    }
+
+.rg-pr-offer {
+    margin: 0 0 6px;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--rg-gold);
+}
+
+.rg-pr-desc {
+    margin: 0 0 12px;
+    font-size: 1.02rem;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.rg-pr-code {
+    display: inline-block;
+    padding: 3px 8px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.rg-pr-actions {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.rg-pr-btn {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    font-family: inherit;
+    line-height: 1.2;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.rg-pr-btn-outline {
+    background: #0b0b0b;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    color: #fff;
+}
+
+    .rg-pr-btn-outline:hover {
+        background: #fff;
+        color: #000;
+    }
+
+.rg-pr-btn-gold {
+    background: var(--rg-gold);
+    border: 1px solid var(--rg-gold);
+    color: #111;
+}
+
+    .rg-pr-btn-gold:hover {
+        background: #f5cb4a;
+        color: #000;
+        box-shadow: 0 6px 18px rgba(232, 185, 49, 0.35);
+    }
+
+@media (max-width: 992px) {
+    .rg-pr-grid {
+        grid-template-columns: 1fr;
+        max-width: 460px;
+        gap: 24px;
+    }
+
+    .rg-pr-head {
+        margin-bottom: 44px;
+    }
+}
+.rg-ct {
+    position: relative;
+    padding: 50px 3vw 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('../images/gym.jpg') center / cover no-repeat;
+    color: #fff;
+}
+
+.rg-ct-gold {
+    color: var(--rg-gold);
+}
+
+.rg-ct-head {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.rg-ct-title {
+    margin: 0 0 6px;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.rg-ct-sub {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.rg-ct-info {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto 26px;
+}
+
+.rg-ct-info-card {
+    min-height: 92px;
+    padding: 20px 20px 16px 50px;
+    background: rgba(8, 8, 8, 0.88);
+    border: 1px solid var(--rg-gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .rg-ct-info-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+    }
+
+    .rg-ct-info-card h5 {
+        margin: 0 0 8px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        color: var(--rg-gold);
+    }
+
+    .rg-ct-info-card p {
+        margin: 0;
+        font-size: 0.72rem;
+        font-weight: 600;
+        line-height: 1.35;
+        color: #fff;
+    }
+
+.rg-ct-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    background: rgba(8, 8, 8, 0.6);
+    border: 1px solid var(--rg-gold);
+}
+
+.rg-ct-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.rg-ct-form-title {
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.rg-ct-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.rg-ct-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+    .rg-ct-field label {
+        margin-bottom: 5px;
+        font-size: 0.78rem;
+        font-weight: 600;
+    }
+
+    .rg-ct-field input,
+    .rg-ct-field textarea {
+        width: 100%;
+        padding: 10px 12px;
+        background: #1c1c1c;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 0;
+        color: #fff;
+        font-family: inherit;
+        font-size: 0.9rem;
+        resize: vertical;
+    }
+
+    .rg-ct-field input {
+        height: 32px;
+    }
+
+        .rg-ct-field input:focus,
+        .rg-ct-field textarea:focus {
+            outline: none;
+            border-color: var(--rg-gold);
+        }
+
+.rg-ct-send {
+    width: 100%;
+    padding: 10px 12px;
+    background: var(--rg-gold);
+    border: 1px solid var(--rg-gold);
+    color: #111;
+    font-size: 0.9rem;
+    font-weight: 800;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+    .rg-ct-send:hover {
+        background: #f5cb4a;
+        box-shadow: 0 6px 18px rgba(232, 185, 49, 0.35);
+    }
+
+.rg-ct-status {
+    margin: 10px 0 0;
+    min-height: 1.2em;
+    font-size: 0.85rem;
+    color: var(--rg-gold);
+}
+
+/* faq */
+.rg-ct-faq-title {
+    margin: 0 0 4px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.rg-ct-faq-sub {
+    margin: 0 0 14px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.rg-ct-faq-item {
+    margin: 0 20px 14px;
+    background: #080808;
+    border: 1px solid var(--rg-gold);
+    transition: box-shadow 0.25s ease;
+}
+
+    .rg-ct-faq-item:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    }
+
+.rg-ct-faq-q {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px;
+    background: transparent !important;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1.35;
+    text-align: left;
+    cursor: pointer;
+}
+
+    .rg-ct-faq-q:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+/* the + / - box */
+.rg-ct-faq-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--rg-gold);
+    color: var(--rg-gold);
+    font-size: 0.95rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.rg-ct-faq-item.open .rg-ct-faq-icon {
+    background: var(--rg-gold);
+    color: #111;
+}
+
+/* smooth open / close */
+.rg-ct-faq-a {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.rg-ct-faq-item.open .rg-ct-faq-a {
+    grid-template-rows: 1fr;
+}
+
+.rg-ct-faq-a-inner {
+    overflow: hidden;
+}
+
+    .rg-ct-faq-a-inner p {
+        margin: 0;
+        padding: 0 14px 12px;
+        font-size: 0.78rem;
+        line-height: 1.35;
+        color: #fff;
+    }
+
+/* tablet / mobile */
+@media (max-width: 992px) {
+    .rg-ct-info {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rg-ct-main {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .rg-ct-faq-item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .rg-ct-info {
+        grid-template-columns: 1fr;
+    }
+
+    .rg-ct-row {
         grid-template-columns: 1fr;
     }
 }
